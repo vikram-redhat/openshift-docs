@@ -21,11 +21,74 @@
 # The ordering of the records in this document determines the ordering of the
 # topic groups and topics on the main page.
 ---
-Name: OpenShift CCS Mod Docs Guide
-Dir: mod_docs_guide
+Name: Plan
+Dir: plan
 Distros: openshift-*
 Topics:
-- Name: Getting Started with Modular Docs on OpenShift
-  File: assembly_getting-started-modular-docs-ocp
-- Name: OpenShift CCS Modular Docs Conventions
-  File: assembly_mod-docs-conventions-ocp
+- Name: OpenShift Architecture
+  File: assembly_ocp-architecture
+- Name: Kubernetes Infrastructure
+  File: assembly_kubernetes-infrastructure
+---
+Name: Install
+Dir: install
+Distros: openshift-*
+Topics:
+- Name: Install an OpenShift PoC
+  File: assembly_install-ocp-poc
+- Name: Install a production ready version of OpenShift Container Platform
+  File: assembly_install-ocp-production
+---
+Name: Configure
+Dir: configure
+Distros: openshift-*
+Topics:
+- Name: Change default registry
+  File: assembly_change-default-registry
+- Name: Modify Master and Node Configuration
+  File: assembly_modify-master-node-configuration
+---
+Name: Develop
+Dir: develop
+Distros: openshift-*
+Topics:
+- Name: Migrate applications
+  File: assembly_migrate-applications
+- Name: Basic Build Operations
+  File: assembly_basic-build-operations
+---
+Name: Manage
+Dir: manage
+Distros: openshift-*
+Topics:
+- Name: Managing Nodes
+  File: assembly_managing-nodes
+- Name: Managing Clusters
+  File: assembly_managing-clusters
+---
+Name: Monitor
+Dir: monitor
+Distros: openshift-*
+Topics:
+- Name: Using CPU Manager
+  File: assembly_using-cpu-manager
+- Name: Environment Health Checks
+  File: assembly_environment-health-checks
+---
+Name: Upgrade
+Dir: upgrade
+Distros: openshift-*
+Topics:
+- Name: Automated In-Place Upgrades
+  File: assembly_automated-in-place-upgrades
+- Name: Manual In-Place Upgrades
+  File: assembly_manual-in-place-upgrades
+---
+Name: Troubleshoot
+Dir: troubleshoot
+Distros: openshift-*
+Topics:
+- Name: Optimizing Compute Resources
+  File: assembly_optimize-compute-resources
+- Name: Troubleshoot upgrade issues
+  File: assembly_troubleshoot-upgrade-issues
