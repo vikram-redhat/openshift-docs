@@ -25,36 +25,36 @@ Name: Plan
 Dir: plan
 Distros: openshift-*
 Topics:
-- Name: OpenShift Architecture
+- Name: Understanding OpenShift Architecture
   File: assembly_ocp-architecture
-- Name: Kubernetes Infrastructure
+- Name: Understanding Kubernetes Infrastructure
   File: assembly_kubernetes-infrastructure
 ---
 Name: Install
 Dir: install
 Distros: openshift-*
 Topics:
-- Name: Install an OpenShift PoC
+- Name: Installing an OpenShift PoC
   File: assembly_install-ocp-poc
-- Name: Install a production ready version of OpenShift Container Platform
+- Name: Installing a production ready version of OpenShift Container Platform
   File: assembly_install-ocp-production
 ---
 Name: Configure
 Dir: configure
 Distros: openshift-*
 Topics:
-- Name: Change default registry
+- Name: Changing default registry
   File: assembly_change-default-registry
-- Name: Modify Master and Node Configuration
+- Name: Modifying Master and Node Configuration
   File: assembly_modify-master-node-configuration
 ---
 Name: Develop
 Dir: develop
 Distros: openshift-*
 Topics:
-- Name: Migrate applications
+- Name: Migrating applications
   File: assembly_migrate-applications
-- Name: Basic Build Operations
+- Name: Performing Basic Build Operations
   File: assembly_basic-build-operations
 ---
 Name: Manage
@@ -72,16 +72,16 @@ Distros: openshift-*
 Topics:
 - Name: Using CPU Manager
   File: assembly_using-cpu-manager
-- Name: Environment Health Checks
+- Name: Performing Environment Health Checks
   File: assembly_environment-health-checks
 ---
 Name: Upgrade
 Dir: upgrade
 Distros: openshift-*
 Topics:
-- Name: Automated In-Place Upgrades
+- Name: Managing Automated In-Place Upgrades
   File: assembly_automated-in-place-upgrades
-- Name: Manual In-Place Upgrades
+- Name: Managing Manual In-Place Upgrades
   File: assembly_manual-in-place-upgrades
 ---
 Name: Troubleshoot
@@ -90,5 +90,5 @@ Distros: openshift-*
 Topics:
 - Name: Optimizing Compute Resources
   File: assembly_optimize-compute-resources
-- Name: Troubleshoot upgrade issues
+- Name: Troubleshooting upgrade issues
   File: assembly_troubleshoot-upgrade-issues
