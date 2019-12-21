@@ -5,11 +5,14 @@
 
 <%# group_id %>
 <%# topic_group[:id] %>
-<%# topic_id %>
+<%= topic_id %>
 
     <%- current_group = topic_group[:id] == group_id -%>
     <li class="nav-header">
 
+<%= current_group %>
+<%=  topic_group[:id] %>
+<%= group_id %>
       <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup<%= groupidx %>">
         <span id="tgSpan<%= groupidx %>" class="fa <%= current_group ? 'fa-angle-down' : 'fa-angle-right' %>"></span>
           <%= topic_group[:name] %>
@@ -69,11 +72,13 @@
                 <%# topic_id %>
 
                 <%- if not subtopic.has_key?(:topics) -%>
-
                 <!-- is this is a single page? That is, does this topic have more topics?
                  Welcome 2 Index Page and Welcome 2 More -->
 
                   <%- current_subtopic = current_group && current_subgroup && (subtopic[:id] == topic_id) %>
+
+Subtopic                  <%= current_subtopic %>
+
                   <li>
                     <a class="<%= current_subtopic ? ' active' : '' %>" href="<%= subtopic_shim %><%= subtopic[:path] %>">
                       <%= subtopic[:name] %>
@@ -86,9 +91,8 @@
 
                 <%- current_subsubgroup = subtopic[:id] == subgroup_id -%>
 
-
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-<%= groupidx %>-<%= topicidx %>">
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-<%= groupidx %>-<%= topicidx %>" aria-expanded="true">
                     <span id="sgSpan-<%= groupidx %>-<%= topicidx %>" class="fa <%= current_subsubgroup ? 'fa-caret-down' : 'fa-caret-right' %>"></span>
                     &nbsp;<%= subtopic[:name] %>
                   </a>
@@ -97,6 +101,13 @@
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
                     <%- current_subsubtopic = current_group && current_subgroup && current_subsubgroup && (subtopic[:id] == topic_id) %>
+
+
+Group: <%= current_group %>
+Subgroup: <%= current_subgroup %>
+Subsubtopic <%= current_subsubtopic %>
+
+
                     <li>
                       <a class="<%= current_subsubtopic ? ' active' : '' %>" href="<%= subtopic_shim %><%= subsubtopic[:path] %>" style="padding-left: 70px;">
                         <%= subsubtopic[:name] %>
