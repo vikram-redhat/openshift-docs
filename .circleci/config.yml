@@ -4,8 +4,6 @@ jobs:
     docker:
       - image: 'circleci/python:latest'
     steps:
-      - gem install asciidoctor
-      - gem install asciidoctor-diagram
       - pip3 install pyyaml
       - pip3 install aura.tar.gz
       - python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.5 --no-upstream-fetch && python3 makeBuild.py
