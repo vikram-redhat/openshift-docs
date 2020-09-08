@@ -13,7 +13,7 @@ jobs:
       - python/save-cache
       - run:
           command: pip3 install aura.tar.gz
-          name: Install Deps
+          name: Install AURA
 workflows:
   main:
     jobs:
