@@ -1,22 +1,16 @@
-language: python
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: 'circleci/python:latest'
+    steps:
+      - gem install asciidoctor
+      - gem install asciidoctor-diagram
+      - pip3 install pyyaml
+      - pip3 install aura.tar.gz
+      - python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.5 --no-upstream-fetch && python3 makeBuild.py
+      - bash autopreview.sh
+      - bash autocomment.sh
 
-cache: pip
-
-sudo: required
-
-before_install:
- - gem install asciidoctor
- - gem install asciidoctor-diagram
-
-install:
- - pip3 install pyyaml
- - pip3 install aura.tar.gz
-
-script:
- - python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.5 --no-upstream-fetch && python3 makeBuild.py
-
-after_success:
- - bash autopreview.sh
-
-after_failure:
- - bash autocomment.sh
+       
+      
