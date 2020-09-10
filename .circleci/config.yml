@@ -4,30 +4,20 @@ orbs:
   python: circleci/python@0.2.1
 
 jobs:
-  pre-build:
+  build-test:
     executor: python/default
-    steps: 
+    steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
-      run: 
-        - command: |
-        gem install asciidoctor 
-        gem install asciidoctor-diagram
-        pip3 install pyyaml
-        pip3 install aura.tar.gz
-  build-and-test:
-    steps:
       - run:
-          command: python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.5 --no-upstream-fetch && python3 makeBuild.py
-          name: Build
-  post-build:
-    steps:
-      - run: autopreview.sh
+          command: |
+            sudo apt-get install ruby rubygems
+            sudo gem install asciidoctor asciidoctor-diagram
+            pip3 install pyyaml
+            pip3 install aura.tar.gz
+            python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.5 --no-upstream-fetch && python3 makeBuild.py
+            sudo bash ./autopreview.sh
+
 workflows:
   main:
     jobs:
-      - pre-build
-      - build-and-test
-      - post-build
+      - build-test
