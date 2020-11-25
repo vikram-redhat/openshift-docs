@@ -7,6 +7,7 @@ import sys
 import os
 import logging
 import imp
+import lxml
 imp.reload(sys)
 
 from lxml import XMLSyntaxError, XIncludeError
