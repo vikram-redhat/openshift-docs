@@ -14,9 +14,10 @@ jobs:
             gem install asciidoctor
             gem install asciidoctor-diagram
             which pip3
-            python3 -m pip install --upgrade pip3
-            python3 -m pip install pyyaml
-            python3 -m pip install aura.tar.gz
+            sudo ln -s $(which pip3) /usr/bin/pip3
+            pip3 install --upgrade pip3
+            pip3 install pyyaml
+            pip3 install aura.tar.gz
             python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.7 --no-upstream-fetch && python makeBuild.py
             bash autopreview.sh
             bash autocomment.sh
