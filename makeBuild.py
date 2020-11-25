@@ -7,10 +7,9 @@ import sys
 import os
 import logging
 import imp
-import lxml
 imp.reload(sys)
 
-from lxml import XMLSyntaxError, XIncludeError
+from lxml.etree import XMLSyntaxError, XIncludeError
 
 from aura import cli, utils
 from aura.exceptions import InvalidInputException
