@@ -5,7 +5,8 @@ orbs:
 
 jobs:
   build-and-test:
-    executor: machine/default
+    machine:
+      image: ubuntu-1604-cuda-10.1:201909-23
     steps:
       - checkout
       - run:
