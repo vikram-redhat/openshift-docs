@@ -11,6 +11,7 @@ jobs:
             gem install asciidoctor
             gem install asciidoctor-diagram
             pip3 install pyyaml
+            pip3 install lxml
             pip3 install aura.tar.gz
             python3 build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.7 --no-upstream-fetch && python makeBuild.py
             bash autopreview.sh
