@@ -13,6 +13,7 @@ jobs:
           command: | 
             gem install asciidoctor
             gem install asciidoctor-diagram
+            pip install --upgrade pip
             pip install pyyaml
             pip install aura.tar.gz
             python build.py --distro openshift-enterprise --product "OpenShift Container Platform" --version 4.7 --no-upstream-fetch && python makeBuild.py
