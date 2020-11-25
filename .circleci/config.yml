@@ -10,6 +10,7 @@ jobs:
           command: | 
             gem install asciidoctor
             gem install asciidoctor-diagram
+            pip3 install --upgrade pip3
             pip3 install pyyaml
             pip3 install aura.tar.gz
             pip3 install --upgrade lxml
