@@ -5,7 +5,7 @@ include::modules/common-attributes.adoc[]
 
 toc::[]
 
-
+TEST CLI
 In software systems, components can become unhealthy due to transient issues such as temporary connectivity loss, configuration errors, or problems with external dependencies. {product-title} applications have a number of options to detect and handle unhealthy containers.
 
 // The following include statements pull in the module files that comprise
@@ -17,5 +17,3 @@ In software systems, components can become unhealthy due to transient issues suc
 include::modules/application-health-about.adoc[leveloffset=+1]
 
 include::modules/application-health-configuring.adoc[leveloffset=+1]
-
-
