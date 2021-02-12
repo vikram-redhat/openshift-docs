@@ -5,9 +5,9 @@ include::modules/common-attributes.adoc[]
 
 toc::[]
 
-This document describes the process to replace a single unhealthy etcd member.
+This document describes the process to replace an unhealthy etcd member.
 
-This process depends on whether the etcd member is unhealthy because the machine is not running or the node is not ready, or whether it is unhealthy because the etcd pod is crashlooping.
+The process depends on whether the etcd member is unhealthy because the machine is not running or the node is not ready, or whether it is unhealthy because the etcd pod is crashlooping.
 
 [NOTE]
 ====
