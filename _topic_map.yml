@@ -811,6 +811,8 @@ Topics:
     File: ephemeral-storage-csi-inline
   - Name: CSI volume snapshots
     File: persistent-storage-csi-snapshots
+  - Name: CSI volume snapshots COPY
+    File: persistent-storage-csi-snapshots-copy
   - Name: CSI volume cloning
     File: persistent-storage-csi-cloning
   - Name: AWS Elastic Block Store CSI Driver Operator
